@@ -1,0 +1,28 @@
+<h3>Nume produs : </h3>
+
+<label>
+  <input type="text" [formControl] = "pName">
+  <button (click)="updateName()">Cauta</button>
+</label>
+
+<p> Value : {{pName.value}} </p>
+
+<h3>Produse gasite </h3>
+
+    <table id="t01">
+      <tr id="trh01">
+        <th>Denumire produs</th>
+        <th>Pret</th>
+        <th>Cantitate</th>
+        <th>Um</th>
+      </tr>
+
+      <tr id = "tr01" *ngFor="let product of products">
+        <td>{{product.productName}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.um}}</td>
+
+      </tr>
+    </table>
+
