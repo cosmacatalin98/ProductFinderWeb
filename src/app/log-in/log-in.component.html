@@ -1,10 +1,12 @@
 <h3> Autentificare </h3>
 
-<label>
+
  <p>Nume utilizator</p>
  <input type="text" [formControl]='uName'>
  <p> Parola</p>
  <input type="text" [formControl]='uPass'>
- <br>
- <button (click)="checkUserInput()">Autentificare</button>
-</label>
+ <br> <br>
+ <button (click)="checkUserInput()" routerLink="userpage">Autentificare</button>
+
+
+
