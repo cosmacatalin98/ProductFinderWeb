@@ -7,14 +7,16 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductService } from './product.service';
+import { UserService } from './user.service';
 import {ReactiveFormsModule} from '@angular/forms';
 import { LogInComponent } from './log-in/log-in.component';
+
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
   declarations: [ AppComponent, TopBarComponent, ProductListComponent, LogInComponent, ],
   bootstrap:    [ AppComponent ],
-  providers: [ProductService, ]
+  providers: [ProductService, UserService, ]
 })
 export class AppModule { }
