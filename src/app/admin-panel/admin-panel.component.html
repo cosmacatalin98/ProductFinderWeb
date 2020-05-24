@@ -1,0 +1,38 @@
+<h2> Sunte-ti autentificat ca si administrator ! </h2>
+<h3>Administrare produse</h3>
+<label>
+  <p> Id produs <input type="number" [formControl] = "pId"></p>
+  <p> Id magazin <input type="number" [formControl] = "pSId"></p> 
+  <p> Nume produs <input type="text" [formControl] = "pName"></p>
+  <p> Cantitate produs <input type="number" [formControl] = "pQuantity"></p>
+  <p> Unitate de masura <input type="text" [formControl] = "pUm"></p> 
+  <p> Pret produs <input type="number" [formControl] = "pPrice"></p>
+  <h3></h3>
+  <button (click)="insertNewProduct()">Inserare produs nou</button>
+  <button (click)="updateProduct()">Actualizare produs</button>
+  <h3></h3>
+  <p> Id produs <input type="number" [formControl] = "pIdDelete"></p>
+  <button (click)="deleteProduct()">Sterge produs</button>
+  <h3></h3>
+</label>
+
+<h3></h3>
+<button (click)="getAllProducts()"> Toate produsele </button>
+<h3></h3>
+
+<table>
+	<tr>
+		<th>Denumire produs</th>
+		<th>Pret</th>
+		<th>Cantitate</th>
+		<th>Um</th>
+	</tr>
+
+	<tr *ngFor="let product of products">
+		<td>{{product.productName}}</td>
+		<td>{{product.price}}</td>
+		<td>{{product.quantity}}</td>
+		<td>{{product.um}}</td>
+
+	</tr>
+</table>
