@@ -12,6 +12,8 @@ export class ProductService {
   private insertProductUrl = "http://localhost:8080/insertNewProduct";
   private updateProductUrl = "http://localhost:8080/updateProduct";
   private deleteProductUrl = "http://localhost:8080/deleteProduct";
+  private sortByPriceUrl = "http://localhost:8080/sortByPrice/";
+  private sortByQuantityUrl = "http://localhost:8080/sortByQuantity/";
 
   constructor(private http: HttpClient) {}
 
@@ -23,6 +25,18 @@ export class ProductService {
     const options = { params: new HttpParams().set("name", name) };
 
     return this.http.get<Product[]>(this.productUrl, options);
+  }
+
+  getPriceSorted(name: string): Observable<Product[]> {
+    const options = { params: new HttpParams().set("name", name) };
+
+    return this.http.get<Product[]>(this.sortByPriceUrl, options);
+  }
+
+  getQuantitySorted(name: string): Observable<Product[]> {
+    const options = { params: new HttpParams().set("name", name) };
+
+    return this.http.get<Product[]>(this.sortByQuantityUrl, options);
   }
 
   insertProduct(product: Product): Observable<Product> {
