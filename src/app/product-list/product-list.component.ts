@@ -40,4 +40,10 @@ export class ProductListComponent implements OnInit {
       .getPriceSorted(this.name)
       .subscribe(data => (this.products = data));
   }
+
+    sortByQuantity(){
+        this.productService
+      .getQuantitySorted(this.name)
+      .subscribe(data => (this.products = data));
+  }
 }

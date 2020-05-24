@@ -29,13 +29,11 @@ export class ProductService {
 
   getPriceSorted(name: string): Observable<Product[]> {
     const options = { params: new HttpParams().set("name", name) };
-
     return this.http.get<Product[]>(this.sortByPriceUrl, options);
   }
 
   getQuantitySorted(name: string): Observable<Product[]> {
     const options = { params: new HttpParams().set("name", name) };
-
     return this.http.get<Product[]>(this.sortByQuantityUrl, options);
   }
 
