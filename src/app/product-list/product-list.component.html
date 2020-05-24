@@ -5,24 +5,27 @@
   <button (click)="updateName()">Cauta</button>
 </label>
 
-<p> Value : {{pName.value}} </p>
 
 <h3>Produse gasite </h3>
 
-    <table id="t01">
-      <tr id="trh01">
-        <th>Denumire produs</th>
-        <th>Pret</th>
-        <th>Cantitate</th>
-        <th>Um</th>
-      </tr>
+<table>
+	<tr>
+		<th>Denumire produs</th>
+		<th>Pret</th>
+		<th>Cantitate</th>
+		<th>Um</th>
+    <th>Magazin</th>
+    <th>Adresa</th>
+	</tr>
 
-      <tr id = "tr01" *ngFor="let product of products">
-        <td>{{product.productName}}</td>
-        <td>{{product.price}}</td>
-        <td>{{product.quantity}}</td>
-        <td>{{product.um}}</td>
-
-      </tr>
-    </table>
-
+	<tr *ngFor="let product of products">
+		<td>{{product.productName}}</td>
+		<td>{{product.price}}</td>
+		<td>{{product.quantity}}</td>
+		<td>{{product.um}}</td>
+    <ng-container *ngFor="let store of stores" >
+    <td *ngIf="product.storeId == store.storeId">{{store.name}}</td>
+    <td *ngIf="product.storeId == store.storeId">{{store.address}}</td>
+    </ng-container>
+	</tr>
+</table>

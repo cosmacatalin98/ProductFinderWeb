@@ -22,6 +22,8 @@
 
 <table>
 	<tr>
+    <th>Id</th>
+    <th>Id magazin</th>
 		<th>Denumire produs</th>
 		<th>Pret</th>
 		<th>Cantitate</th>
@@ -29,6 +31,8 @@
 	</tr>
 
 	<tr *ngFor="let product of products">
+    <td>{{product.productId}}</td>
+    <td>{{product.storeId}}</td>
 		<td>{{product.productName}}</td>
 		<td>{{product.price}}</td>
 		<td>{{product.quantity}}</td>

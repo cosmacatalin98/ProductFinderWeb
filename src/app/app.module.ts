@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { LogInComponent } from "./log-in/log-in.component";
 import { AuthGuardService } from './auth-guard.service';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { StoreService } from './store.service';
 
 const appRoutes: Routes = [
       { path: "", component: LogInComponent },
@@ -37,6 +38,6 @@ const appRoutes: Routes = [
     AdminPanelComponent
   ],
   bootstrap: [AppComponent],
-  providers: [ProductService, UserService, AuthGuardService]
+  providers: [ProductService, UserService, AuthGuardService, StoreService]
 })
 export class AppModule {}
