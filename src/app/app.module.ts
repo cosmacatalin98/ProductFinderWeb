@@ -12,9 +12,11 @@ import { UserService } from "./user.service";
 import { ReactiveFormsModule } from "@angular/forms";
 import { LogInComponent } from "./log-in/log-in.component";
 import { AuthGuardService } from './auth-guard.service';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 const appRoutes: Routes = [
       { path: "", component: LogInComponent },
+      { path: "adminpage", component: AdminPanelComponent },
       { path: "userpage", component: ProductListComponent, canActivate: [AuthGuardService] }
 ];
 
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
     AppComponent,
     TopBarComponent,
     ProductListComponent,
-    LogInComponent
+    LogInComponent,
+    AdminPanelComponent
   ],
   bootstrap: [AppComponent],
   providers: [ProductService, UserService, AuthGuardService]

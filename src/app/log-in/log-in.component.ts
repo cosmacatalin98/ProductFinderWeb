@@ -27,17 +27,31 @@ export class LogInComponent implements OnInit {
   // Verificam daca datele introduse de catre utilizator sunt corecte
   // caz in care autorizam autentificarea
   checkUserInput() {
-    var isValid = false;
+    var isValid = 0;
     for (let user of this.users) {
       if (
         user.username == this.uName.value &&
-        user.password == this.uPass.value
+        this.uName.value == "cosmacatalin98" &&
+        user.password == this.uPass.value &&
+        this.uPass.value == "pass123"
       ) {
-        isValid = true;
+        isValid = 1;
         break;
       }
     }
 
-    this.authGuardService.validUser = isValid ;
+    if (isValid != 1) {
+      for (let user of this.users) {
+        if (
+          user.username == this.uName.value &&
+          user.password == this.uPass.value
+        ) {
+          isValid = 2;
+          break;
+        }
+      }
+    }
+
+    this.authGuardService.opt = isValid;
   }
 }
