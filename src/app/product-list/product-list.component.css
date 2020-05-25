@@ -1,19 +1,88 @@
-h3{
-margin-left: 15px;
-}
-table, tr, th, td{
+
+table{
   border: 3px solid black;
   border-collapse:collapse;
   text-align:center;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  background-color:#ff510057;;
+
+}
+
+th{
+border: 3px solid black;
+padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+tr{
+border: 3px solid black;
+padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+tr:hover {background-color:#fc680562;}
+
+td{
+border: 3px solid black;
+padding: 10px;
+}
+
+#d01{
+  text-align: center;
+}
+
+#d02{
+  overflow-x: auto;
+}
+
+p{
+  font-size: 21px;
+  font-weight: bold;
+}
+
+input{
+  border-color:black;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 6px;
+}
+button:hover {background-color: #fc680562}
+button{
+  outline:none;
   padding: 5px;
-
+}
+#b01{
+  border-radius: 10px;
+  margin-left: 6px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-table{
-  margin-left: 10px;
+#b02{
+  border-radius: 10px;
+  margin-right: 6px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-label, p{
-  margin-left: 10px;
+#b03{
+  border-radius: 10px;
+  margin-left: 6px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
 }
 

@@ -1,25 +1,29 @@
-<h3>Nume produs : </h3>
+<div id="d01">
+<p> Bine ați venit !</p>
 
-<label>
-  <input type="text" [formControl] = "pName">
-  <button (click)="updateName()">Cauta</button>
-</label>
+<p> Introduceți în bara de căutare numele unui produs comercial :</p>
 
 
-<h3>Produse gasite </h3>
-<label>
-  <button (click)="sortByPrice()">Sorteaza dupa pret</button>
-  <button (click)="sortByQuantity()">Sorteaza dupa cantitate</button>
-  <h3></h3>
-</label>
+<input type="text" [formControl] = "pName" spellcheck="false">
+<button id ="b01" (click)="updateName()">Caută</button>
 
+
+<p>Produse găsite :</p>
+
+
+<button id="b02" (click)="sortByPrice()">Sortează dupa preț</button>
+<button id="b03" (click)="sortByQuantity()">Sortează dupa cantitate</button>
+
+</div>
+
+<div id="d02">
 <table>
 	<tr>
 		<th>Denumire produs</th>
-		<th>Pret</th>
+		<th>Preț</th>
 		<th>Cantitate</th>
 		<th>Um</th>
-    <th>Magazin</th>
+    <th>Centru comercial</th>
     <th>Adresa</th>
 	</tr>
 
@@ -34,3 +38,4 @@
     </ng-container>
 	</tr>
 </table>
+<div>

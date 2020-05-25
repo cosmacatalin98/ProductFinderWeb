@@ -6,6 +6,7 @@ div{
 p{
   font-size: 21px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 input{
@@ -16,6 +17,7 @@ input{
 }
 
 button{
+  outline: none;
   border-radius: 10px;
   border-color:black;
   padding: 5px 25px;
@@ -24,3 +26,4 @@ button{
   font-weight: bold;
   cursor: pointer;
 }
+button:hover {background-color: #fc680562}
