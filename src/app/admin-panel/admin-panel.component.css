@@ -1,18 +1,115 @@
-h3, h2,  button{
-margin-left: 15px;
+
+* {
+  box-sizing: border-box;
 }
-table, tr, th, td{
+table{
   border: 3px solid black;
   border-collapse:collapse;
   text-align:center;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  background-color:#ff510057;
+
+}
+
+th{
+border: 3px solid black;
+padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+tr{
+border: 3px solid black;
+padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+tr:hover {background-color:#fc680562;}
+
+td{
+border: 3px solid black;
+padding: 10px;
+}
+
+#table-wrapper {
+  position:relative;
+}
+
+#table-scroll {
+  height:300px;
+  overflow:auto;  
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+p{
+  font-size: 21px;
+  font-weight: bold;
+}
+
+button:hover {background-color: #fc680562}
+button{
+  outline:none;
   padding: 5px;
+  border-radius: 10px;
+  margin-left: 6px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#dmain:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#d01{
+  text-align: center;
+}
+
+
+#d02, #d03, #d04{
+  text-align: center;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
 
 }
 
-table{
-  margin-left: 10px;
+#d03a, #d03b{
+  float:left;
+  width: 50%;
+  padding: 10px;
 }
 
-label, p{
-  margin-left: 10px;
+#in01, #in02, #in03, #in04, #in05, #in06{
+  margin-top: 25px;
+  margin-right: 120px;
 }
+
+#p01, #p02, #p03, #p04, #p05, #p06{
+  margin-left: 120px;
+}
+
+#b01{
+  margin-top: 19px;
+  margin-right: 120px;
+}
+
+#b02{
+  margin-left: 120px;
+}
+
+
+
+
+
+

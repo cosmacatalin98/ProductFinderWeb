@@ -1,35 +1,28 @@
-<h2> Sunte-ti autentificat ca si administrator ! </h2>
-<h3>Administrare produse</h3>
-<label>
-  <p> Id produs <input type="number" [formControl] = "pId"></p>
-  <p> Id magazin <input type="number" [formControl] = "pSId"></p> 
-  <p> Nume produs <input type="text" [formControl] = "pName"></p>
-  <p> Cantitate produs <input type="number" [formControl] = "pQuantity"></p>
-  <p> Unitate de masura <input type="text" [formControl] = "pUm"></p> 
-  <p> Pret produs <input type="number" [formControl] = "pPrice"></p>
-  <h3></h3>
-  <button (click)="insertNewProduct()">Inserare produs nou</button>
-  <button (click)="updateProduct()">Actualizare produs</button>
-  <h3></h3>
-  <p> Id produs <input type="number" [formControl] = "pIdDelete"></p>
-  <button (click)="deleteProduct()">Sterge produs</button>
-  <h3></h3>
-</label>
+<div id="dmain">
 
-<h3></h3>
+<div id="d01">
+<p> Sunte-ți autentificat ca și administrator !</p>
+<p> Administrare produse : </p>
+</div>
+
+
+<div id="d02">
 <button (click)="getAllProducts()"> Toate produsele </button>
-<h3></h3>
-
+<div id="table-wrapper">
+  <div id="table-scroll">
 <table>
+<thead>
 	<tr>
-    <th>Id</th>
-    <th>Id magazin</th>
-		<th>Denumire produs</th>
-		<th>Pret</th>
-		<th>Cantitate</th>
-		<th>Um</th>
+    <th class="text">Id</th>
+    <th class="text">Id magazin</th>
+		<th class="text">Denumire produs</th>
+		<th class="text">Pret</th>
+		<th class="text">Cantitate</th>
+		<th class="text">Um</th>
 	</tr>
+</thead>
 
+<tbody>
 	<tr *ngFor="let product of products">
     <td>{{product.productId}}</td>
     <td>{{product.storeId}}</td>
@@ -37,6 +30,41 @@
 		<td>{{product.price}}</td>
 		<td>{{product.quantity}}</td>
 		<td>{{product.um}}</td>
-
 	</tr>
+</tbody>
+
 </table>
+  </div>
+</div>
+</div>
+
+<div id="d03">
+  <div id="d03a">
+  <p id="p01"> Id produs </p>
+  <p id="p02"> Id magazin </p> 
+  <p id="p03"> Nume produs </p>
+  <p id="p04"> Cantitate produs </p>
+  <p id="p05"> Unitate de masura </p> 
+  <p id="p06"> Pret produs </p>
+  <button id="b02" (click)="insertNewProduct()">Inserare produs nou</button>
+  </div>
+
+  <div id="d03b">
+  <input id="in01" type="number" [formControl] = "pId">
+  <input id="in02" type="number" [formControl] = "pSId">
+  <input id="in03" type="text" [formControl] = "pName">
+  <input id="in04" type="number" [formControl] = "pQuantity">
+  <input id="in05" type="text" [formControl] = "pUm">
+  <input id="in06" type="number" [formControl] = "pPrice">
+  <button id="b01" (click)="updateProduct()">Actualizare produs</button>
+  </div>
+
+</div>
+
+<div id="d04">
+  <p> Introduceți id-ul produsului pe care doriți să-l ștergeți </p>
+  <p> Id produs <input type="number" [formControl] = "pIdDelete"></p>
+  <button (click)="deleteProduct()">Șterge produs</button>
+</div>
+
+</div>
